@@ -1,14 +1,20 @@
+import resources
+from resources import *
 class Dictionary:
     def __init__(self):
-        pass
+        self.dict = [] #lista di parole del dizionario
 
     def loadDictionary(self,path):
-        pass
+        with open(path,'r') as file:
+            y=file.read()
+            listaRighe=y.split('\n')
+            self.dict=listaRighe
+
 
     def printAll(self):
         pass
 
 
-    @property
-    def dict(self):
-        return self._dict
+    # @property
+    # def dict(self):
+    #     return self._dict
